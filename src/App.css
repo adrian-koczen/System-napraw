@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sign In */
+
+.signin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.signin-form * {
+  margin: 0.5rem 0;
+}
+
+.signin-box {
+  padding: 2rem;
+  border-radius: 5px;
+  background: #fff;
+  width: 600px;
+  height: 500px;
+  border-radius: 25px 0 0 25px;
+  border: 2px solid #dfdddd;
+  border-right: none;
+}
+
+.signin-box h1 {
+  margin-bottom: 1rem;
+  color: blueviolet;
+}
+
+.signin-box-right {
+  height: 500px;
+  width: 400px;
+  border-radius: 0 25px 25px 0;
+  border: 2px solid #dfdddd;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(236, 236, 236);
+}
+
+.signin-box-right * {
+  margin: 0.5rem 0;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.signin-form input {
+  border: 1px solid rgb(194, 193, 193);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.forgot-password {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-button {
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  width: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background: blueviolet;
+  transition: 0.5s;
+}
+
+.primary-button:hover {
+  transition: 0.5s;
+  background: rgb(148, 72, 219);
+}
+
+/* Dashboard */
+
+.dashboard-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  height: 100vh;
+  border-right: 1px solid rgb(197, 197, 197);
+  width: 250px;
+  min-width: 250px;
+  background: #f9f9fa;
+}
+
+.menu-tab {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.menu-tab:hover {
+  color: rgb(148, 72, 219);
+}
+
+.tab-icon {
+  margin-right: 1rem;
+  height: 20px;
+  width: 20px;
+  color: rgb(148, 72, 219);
+}
+
+.left-menu-logo {
+  color: rgb(148, 72, 219);
+  padding: 0.5rem;
+}
+
+.right-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Top Bar */
+
+.top-bar-wrapper {
+  border-bottom: 1px solid rgb(197, 197, 197);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-bar-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.top-bar-user-username {
+  cursor: pointer;
+}
+
+.top-bar-user * {
+  margin-right: 1rem;
+}
+
+.top-bar-logout {
+  color: rgb(148, 72, 219);
+  cursor: pointer;
+}
+
+.top-bar-icon {
+  position: relative;
+  top: 1px;
+}
+
+.username-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 45px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+  width: 250px;
+  font-weight: 300;
+  font-size: 15px;
+  background: #fff;
+}
+
+.username-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.username-menu ul {
+  margin-top: 10px;
+}
+
+.username-menu ul li {
+  list-style: none;
+  margin: 0.7rem 0;
+}
+
+.username-menu-title {
+  font-weight: bold;
+  color: rgb(148, 72, 219);
+}
+
+.username-menu-logout {
+  border-top: 1px solid rgb(197, 197, 197);
+  padding: 0.5rem;
+}
+
+.username-menu-logout-button {
+  cursor: pointer;
+}
+
+.username-menu-element {
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.first-letter-up:first-letter {
+  text-transform: capitalize;
+}
+
+.username-menu-element:hover {
+  text-decoration: underline;
+}
+
+/* Tab Label */
+
+.tab-label-wrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+.tab-label-wrapper h2 {
+  margin-left: 20px;
+  color: rgb(148, 72, 219);
+}
+
+/* Setting Select Tab */
+
+.settings-select-tab {
+  padding: 0 1rem;
+}
+
+.settings-select-tab ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.settings-select-tab ul li {
+  list-style: none;
+  margin-right: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* 2FA Settings */
+
+.twofa-settings-tab-wrapper {
+  margin: 1rem 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.twofa-settings-tab {
+  margin-bottom: 1rem;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qrcode-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.qrcode-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* Buttons */
+
+.button {
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: white;
+  font-size: 14px;
+  background: rgb(148, 72, 219);
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transition: 0.3s;
+  background: rgb(102, 42, 158);
+}
+
+.input {
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: 1px solid rgb(148, 72, 219);
+  width: 200px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.twofacode-remove {
+  border-radius: 5px;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0.3rem;
+  border: 1px solid rgb(148, 72, 219);
+  width: 200px;
+}
+
+.twofacode-remove:focus {
+  outline: none;
+}
+
+/* Password reset */
+
+.settings-password-wrapper {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-password {
+  margin-top: 1rem;
+}
+
+.form-element {
+  margin: 1rem 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 2FA login component */
+
+.two-fa-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.two-fa-login-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.two-fa-login-wrapper form * {
+  margin: 0.5rem 0;
+}

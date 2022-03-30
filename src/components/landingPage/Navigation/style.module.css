@@ -1,0 +1,62 @@
+/* Navigation */
+
+.logo {
+  color: #6a3ce2;
+  font-weight: bold;
+}
+
+.navigationWrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.navigationList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navigationListElement {
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.7rem;
+  color: #0f1c35;
+  cursor: pointer;
+  font-weight: 400;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.navigationListElement:hover {
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+
+/* Mobile navigation */
+
+.mobileNavigationWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 1rem;
+}
+
+.burgerMenuIcon {
+  position: relative;
+  top: 3px;
+  font-size: 1rem;
+}
