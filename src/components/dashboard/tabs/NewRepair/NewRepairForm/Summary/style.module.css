@@ -1,0 +1,25 @@
+.container {
+  background-color: #e6e6e6;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.elementContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.elementTitle {
+  margin-left: 10px;
+}
+
+.beforeSpan::before {
+  position: absolute;
+  margin-right: 10px;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 20px;
+  background: #9448db;
+}

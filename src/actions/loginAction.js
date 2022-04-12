@@ -22,7 +22,7 @@ export const loginAction = (formData) => async (dispatch) => {
       },
     };
     let user = await axios.post(
-      "https://panel-api.koczenadrian.pl/api/loaduser",
+      `${process.env.REACT_APP_API_ENDPOINT}/api/loaduser`,
       null,
       config
     );

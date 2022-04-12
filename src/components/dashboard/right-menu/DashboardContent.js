@@ -3,6 +3,7 @@ import TopBar from "./TopBar";
 // Components
 import SettingsTab from "../tabs/Settings/SettingsTab";
 import MainPage from "../tabs/MainPage/MainPage";
+import NewRepair from "../tabs/NewRepair/NewRepair";
 // Router
 import { Routes, Route } from "react-router-dom";
 
@@ -18,10 +19,7 @@ const DashboardContent = () => {
       </div>
       <Routes>
         <Route index element={<MainPage />} />
-        <Route
-          path="nowa-naprawa"
-          element={<ElementTemp name={"Nowa naprawa"} />}
-        />
+        <Route path="nowa-naprawa" element={<NewRepair />} />
         <Route
           path="zgloszenie-problemu"
           element={<ElementTemp name={"Zgłoszenie problemu"} />}

@@ -7,3 +7,5 @@ export const SELECTSETTINGSTAB = "SELECTSETTINGSTAB";
 // Notifications
 export const ADD_NOTIFICATION = "ADD_NOTIFICATION";
 export const REMOVE_NOTIFICATION = "REMOVE_NOTIFICATION";
+// Userdata
+export const LOAD_USER_DATA = "LOAD_USER_DATA";

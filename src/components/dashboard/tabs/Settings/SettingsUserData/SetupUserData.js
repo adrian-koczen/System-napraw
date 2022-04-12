@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./styles.module.css";
 import axios from "axios";
 import { addNotification } from "../../../../../actions/notifications";
 import { connect } from "react-redux";
@@ -13,11 +12,15 @@ const SetupUserData = ({ addNotification }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://panel-api.koczenadrian.pl/personalData", dataForm, {
-        headers: {
-          "x-auth-token": localStorage.getItem("x-auth-token"),
-        },
-      })
+      .post(
+        `${process.env.REACT_APP_API_ENDPOINT}/api/personalData`,
+        dataForm,
+        {
+          headers: {
+            "x-auth-token": localStorage.getItem("x-auth-token"),
+          },
+        }
+      )
       .then((response) => {
         addNotification(response.data.message, "success");
       })

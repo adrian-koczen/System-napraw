@@ -16,7 +16,7 @@ export const twoFA = (code) => async (dispatch) => {
     },
   };
   const verify = await axios.post(
-    "https://panel-api.koczenadrian.pl/api/verify2FA",
+    `${process.env.REACT_APP_API_ENDPOINT}/api/verify2FA`,
     {
       verifycode: code,
     },
@@ -24,7 +24,7 @@ export const twoFA = (code) => async (dispatch) => {
   );
   if (verify) {
     let request = await axios.post(
-      "https://panel-api.koczenadrian.pl/api/loaduser",
+      `${process.env.REACT_APP_API_ENDPOINT}/api/loaduser`,
       null,
       config
     );

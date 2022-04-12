@@ -1,11 +1,19 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-
 //Actions
-import { logoutAction } from "../../../../actions/logoutAction";
+import { logoutAction } from "../../../../../actions/logoutAction";
+import { addNotification } from "../../../../../actions/notifications";
+import { authorizationAction } from "../../../../../actions/authorizationAction";
+//Components
+import TwoFAverifyCode from "./TwoFAverifyCode";
 
-const Settings2FA = ({ user, logoutAction }) => {
+const Settings2FA = ({
+  user,
+  logoutAction,
+  addNotification,
+  authorizationAction,
+}) => {
   const [qrCode, setqrCode] = useState(null);
   const [twofacode, settwofacode] = useState(false);
   const [twofacodevalue, settwofacodevalue] = useState("");
@@ -16,7 +24,7 @@ const Settings2FA = ({ user, logoutAction }) => {
     const token = localStorage.getItem("x-auth-token");
     try {
       await axios
-        .post("https://panel-api.koczenadrian.pl/api/create2FA", null, {
+        .post(`${process.env.REACT_APP_API_ENDPOINT}/api/create2FA`, null, {
           headers: {
             "x-auth-token": token,
           },
@@ -25,7 +33,7 @@ const Settings2FA = ({ user, logoutAction }) => {
           setqrCode(res.data);
         });
     } catch (error) {
-      console.log(error);
+      addNotification(error.response.data, "error");
     }
   };
   const turnOff2FA = async (code) => {
@@ -33,7 +41,7 @@ const Settings2FA = ({ user, logoutAction }) => {
     try {
       await axios
         .post(
-          "https://panel-api.koczenadrian.pl/api/remove2FA",
+          `${process.env.REACT_APP_API_ENDPOINT}/api/remove2FA`,
           { verifycode: code },
           {
             headers: {
@@ -57,6 +65,9 @@ const Settings2FA = ({ user, logoutAction }) => {
       settwofacodevalue(e.target.value);
     }
   };
+  useEffect(() => {
+    authorizationAction();
+  }, []);
   return (
     <div className="twofa-settings-tab-wrapper">
       <form onSubmit={submitHandler}>
@@ -99,13 +110,8 @@ const Settings2FA = ({ user, logoutAction }) => {
             </button>
           </div>
         )}
-        {qrCode && (
-          <div className="qrcode-wrapper">
-            <span>Zeskanuj kod aplikacją google Authenticator</span>
-            <img className="qrcode-image" alt="qrCode" src={`${qrCode}`} />
-          </div>
-        )}
       </form>
+      {qrCode && <TwoFAverifyCode qrCode={qrCode} />}
     </div>
   );
 };
@@ -114,4 +120,8 @@ const mapStateToProps = (state) => {
   return { user: state.authorization.user };
 };
 
-export default connect(mapStateToProps, { logoutAction })(Settings2FA);
+export default connect(mapStateToProps, {
+  logoutAction,
+  addNotification,
+  authorizationAction,
+})(Settings2FA);

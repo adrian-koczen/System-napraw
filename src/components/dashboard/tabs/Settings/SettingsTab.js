@@ -2,7 +2,7 @@ import React from "react";
 import TabLabel from "../TabLabel";
 import SettingsSelect from "./SettingsSelect";
 import SettingsPassword from "./SettingsPassword";
-import Settings2FA from "./Settings2FA";
+import Settings2FA from "./2FA/Settings2FA";
 import SetupUserData from "./SettingsUserData/SetupUserData";
 // Router
 import { Routes, Route } from "react-router-dom";

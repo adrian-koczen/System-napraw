@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.marginLeft {
+  margin-left: 18px;
+}
+
+.qrCode {
+  width: 200px;
+  height: 200px;
+}
+
+.formContainer {
+  max-width: 300px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer * {
+  margin: 8px 0;
+}

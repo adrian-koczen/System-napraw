@@ -23,7 +23,7 @@ const SettingsPassword = ({ logoutAction, addNotification }) => {
     const token = localStorage.getItem("x-auth-token");
     await axios
       .post(
-        "https://panel-api.koczenadrian.pl/api/passwordReset",
+        `${process.env.REACT_APP_API_ENDPOINT}/api/passwordReset`,
         {
           password: password,
           newPassword: newPassword,

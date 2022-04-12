@@ -19,7 +19,7 @@ const SignUp = ({ authorization, loginAction, addNotification }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://panel-api.koczenadrian.pl/api/user", {
+      .post(`${process.env.REACT_APP_API_ENDPOINT}/api/user`, {
         username: formData.login,
         email: formData.email,
         password: formData.password,
