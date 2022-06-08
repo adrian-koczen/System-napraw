@@ -1,4 +1,4 @@
-import { LOADUSER, NO_TOKEN } from "../tills/actionTypes";
+import { LOADUSER, NO_TOKEN } from "../utills/actionTypes";
 import axios from "axios";
 
 export const authorizationAction = () => async (dispatch) => {

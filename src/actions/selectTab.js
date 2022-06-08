@@ -1,4 +1,4 @@
-import { SELECTTAB, SELECTSETTINGSTAB } from "../tills/actionTypes";
+import { SELECTTAB, SELECTSETTINGSTAB } from "../utills/actionTypes";
 
 export const selectTab = (ID) => async (dispatch) => {
   try {

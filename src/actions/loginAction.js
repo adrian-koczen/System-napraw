@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_USER_SUCCESS, LOADUSER } from "../tills/actionTypes";
+import { LOGIN_USER_SUCCESS, LOADUSER } from "../utills/actionTypes";
 
 export const loginAction = (formData) => async (dispatch) => {
   const { login, password } = formData;

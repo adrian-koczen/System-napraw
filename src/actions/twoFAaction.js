@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NO_TOKEN, LOADUSER } from "../tills/actionTypes";
+import { NO_TOKEN, LOADUSER } from "../utills/actionTypes";
 
 export const twoFA = (code) => async (dispatch) => {
   let token = localStorage.getItem("x-auth-token");

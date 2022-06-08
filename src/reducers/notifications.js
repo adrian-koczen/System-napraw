@@ -1,4 +1,4 @@
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../tills/actionTypes";
+import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../utills/actionTypes";
 
 const initialState = [];
 

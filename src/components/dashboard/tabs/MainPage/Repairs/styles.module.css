@@ -1,5 +1,10 @@
 .container {
   padding: 10px 20px;
+  background-color: #ece7f1;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .repairs {
@@ -16,7 +21,6 @@
   height: 300px;
   background-color: #ece7f1;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -25,4 +29,16 @@
   font-size: 32px;
   font-weight: 600;
   cursor: default;
+}
+
+.repairContainer {
+  max-width: 300px;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.repairContainer * {
+  margin: 8px 0;
 }

@@ -1,4 +1,4 @@
-import { LOGOUT } from "../tills/actionTypes";
+import { LOGOUT } from "../utills/actionTypes";
 
 export const logoutAction = () => (dispatch) => {
   localStorage.removeItem("x-auth-token");

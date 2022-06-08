@@ -44,6 +44,18 @@ const SelectStep = ({ dataForm, setDataForm }) => {
         />
       );
     case 3:
+      return (
+        <FormElement
+          title={"Opis problemu"}
+          placeholder={"Wprowadź opis problemu"}
+          name="opis"
+          dataForm={dataForm}
+          setDataForm={setDataForm}
+          setStep={setStep}
+          step={step}
+        />
+      );
+    case 4:
       return <Summary dataForm={dataForm} />;
     default:
       return <></>;
@@ -66,6 +78,11 @@ const NewRepairForm = () => {
       value: "",
       isCompleted: false,
       step: 2,
+    },
+    opis: {
+      value: "",
+      isCompleted: false,
+      step: 3,
     },
   });
   return (

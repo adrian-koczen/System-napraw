@@ -1,4 +1,4 @@
-import { LOADUSER, NO_TOKEN, LOGOUT } from "../tills/actionTypes";
+import { LOADUSER, NO_TOKEN, LOGOUT } from "../utills/actionTypes";
 
 export default function authorization(
   state = { isAuthenticated: false, loading: true },

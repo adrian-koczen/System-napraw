@@ -1,4 +1,4 @@
-import { LOGIN_USER_SUCCESS } from "../tills/actionTypes";
+import { LOGIN_USER_SUCCESS } from "../utills/actionTypes";
 
 export default function userdata(state = {}, action) {
   const { payload, type } = action;

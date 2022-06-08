@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../tills/actionTypes";
+import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../utills/actionTypes";
 
 export const addNotification =
   (notificationMessage, notificationType) => (dispatch) => {

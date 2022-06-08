@@ -36,7 +36,6 @@ const LeftMenu = () => {
     const string = leftMenuTabs.filter(
       (el) => Number(el.id) === Number(e.target.id)
     )[0].string;
-    console.log(string);
     history(string);
   };
   return (
